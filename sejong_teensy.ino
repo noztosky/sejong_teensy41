@@ -16,13 +16,16 @@ void setup()
 {
   Serial.begin(0);
   Wire1.begin();
-  Wire1.setClock(400000);  // 400 kHz OK
+  Wire1.setClock(400000);       // 400 kHz OK
 
   // ms5611
   _m.sensor.ms5611.setup();
 
   // icm42688p
   _m.sensor.icm42688p.setup();
+
+  // icm20948
+  _m.sensor.icm20948.setup();
 
   // ist8310
   _m.sensor.ist8310.setup();
@@ -59,5 +62,5 @@ void loop()
   // voltage adc
   _m.port.adc.loop_async();     // 0.5초마다 전압 출력
 
-  delay(500);
+  delay(5000);
 }

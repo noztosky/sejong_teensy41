@@ -3,6 +3,7 @@
 #include "x_serials.h"    
 #include "x_ms5611.h"   
 #include "x_icm42688p.h"    
+#include "x_icm20948.h"
 #include "x_ist8310.h"    
 #include "x_leds.h"   
 #include "x_sd.h"
@@ -14,6 +15,7 @@ struct{
   struct{   
     x_ms5611                        ms5611;
     x_icm42688p                     icm42688p;
+    x_icm20948                      icm20948;
     x_ist8310                       ist8310;
   }sensor;          
 
